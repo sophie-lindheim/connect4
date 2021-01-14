@@ -7,12 +7,13 @@ def play(n=None):
     if n is None:
         while True:
             try:
-                n = int(
-                    input("Welcome to our connect 4 game. First you need chose if you want to play against an AI"
-                          "[type 1] or another player [type 2]. After that you need to chose the column you want to put"
-                          "your stone in [type a-g], then the it's the other players turn (whether it's an actual"
-                          "player or just the AI). But first please type [1] for a play against the AI or [2] for a"
-                          "play against each other:"))
+                n = int(input("Welcome to our little connect 4 game!\n"
+                              "First you will select whether you want to play against an AI or against each other.\n"
+                              "After that you will be asked to enter a letter between a to g, which stands for \nthe"
+                              " row you want to put your stone in. Then the other player (AI or actual player, depends)"
+                              "\ndoes the same thing. The winner is the player with four stones in a row, column or"
+                              " diagonal.\nIf you are unsure, the game will tell you if you, the other player or"
+                              "the AI has won."))
             except ValueError:
                 print('Invalid input')
                 continue
@@ -36,7 +37,7 @@ def play(n=None):
         return
 
 
-def get_input(actual_player, c4_input, game_mode, end_game):
+def get_input(actual_player, c4_input, game_mode, end_game=False):
     if game_mode == 1 and actual_player == 2:  # if actual player is computer, generates the input as random
         letters = "abcdefg"
         c4_input = random.choice(letters)
@@ -50,11 +51,22 @@ def get_input(actual_player, c4_input, game_mode, end_game):
         return c4_input
 
 
+def check_column_emptiness(table) -> bool:
+    for each in table:
+        pass
+
+
 def implement_move_on_table(c4_input, actual_player, table):
-    for row in table[::-1]:
-        if not table[c4_input]:
-            table[c4_input] = actual_player
-            return
+    for each in table:
+        if each.c4_input == 'a':
+            if table[6, 0] == 0:
+                table[6, 0] = actual_player
+            else:
+                table[5, 0] = actual_player
+        elif each.c4_input == 'b':
+            table[6, 1] = actual_player
+            actual_player += 1
+            print(table)
 
 
 def check_winner(actual_player, table):

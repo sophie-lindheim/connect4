@@ -14,11 +14,15 @@ def connect4():
     table = np.array([[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0],
                       [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]])
     while end_game is False:
-        print("Welcome to our little connect 4 game! First you will select whether you want to play against an AI or"
-              "against each other. After that")
+        print("Welcome to our little connect 4 game!\n"
+              "First you will select whether you want to play against an AI or against each other.\n"
+              "After that you will be asked to enter a letter between a to g, which stands for \nthe "
+              "row you want to put your stone in. Then the other player (AI or actual player, depends)"
+              "\ndoes the same thing. The winner is the player with four stones in a row, column or"
+              "diagonal.\nIf you are unsure, the game will tell you if you, the other player or"
+              "the AI has won.")
         print(table)
-        print("Please enter 1 if you want to play against an AI or 2 if you want"
-              "to play against each other:")
+        print("Please enter 1 if you want to play against an AI or 2 if you want to play against each other:")
         game_mode = int(input())
         actual_player = 2
         while input_valid is False or end_game is False:
