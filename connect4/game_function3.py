@@ -5,6 +5,21 @@ from typing import Dict
 
 def connect4():
     """ A little game of connect 4.
+        This function works as game of connect 4. To be used the user enters an Input between 1-2.
+        The function starts a game sequence where several things happen further described in the code with line
+        comments. It checks if the actual player is the computer. If yes, the c4_input will be generated as a random
+        lowercase letter between a - g. If the actual_player is not the computer, the player will be asked for an input,
+        which will be saved in the c4_input variable.To check if the actual player who took this step is a winner
+        sequence based on the actual player's number. Then checks first the rows, then the columns, then the
+        left-to-right diagonals, then the right-to-left diagonals, if the actual table contains the winning sequence.
+        If the winner sequence is found, the end_game variable is set to True and the function terminates.
+
+        Parameters
+        -----------
+
+        Returns
+        -------
+        None
     """
     game_mode = 0
     end_game = False
