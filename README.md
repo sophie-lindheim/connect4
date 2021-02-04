@@ -7,7 +7,7 @@ project, so the timelyiness and the progress can be tracked.
 
 
 The game is located in the c4_class.py file, can be started by creating an object
-of the C$Game class and calling the main function"connect4()" with this object. For example:
+of the C4Game class and calling the main function"connect4()" with this object. For example:
 g = C4Game()
 g.connect4()
 
