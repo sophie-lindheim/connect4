@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from c4_class import C4Game
+from connect4.c4 import C4Game
 
 
 class CheckTestCase(unittest.TestCase):

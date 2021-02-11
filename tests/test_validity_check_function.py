@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch
 import numpy as np
-from c4_class import C4Game
+from connect4.c4 import C4Game
 
 
 class ValidityTestCase(unittest.TestCase):
